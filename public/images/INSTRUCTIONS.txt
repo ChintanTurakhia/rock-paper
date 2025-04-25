@@ -1,0 +1,29 @@
+IMPORTANT: Image Files for Farcaster Frames
+
+For the Rock Paper Scissors mini-app to work properly with Farcaster Frames, you need to create the following image files:
+
+1. welcome.png - The welcome screen image (3:2 aspect ratio)
+   - You can generate this from the welcome-image.html file in the public directory
+
+2. choose.png - The image showing the choice selection screen
+   - You can generate this from the choose-template.html file in the public directory
+
+3. round-rock-rock.png, round-rock-paper.png, round-rock-scissors.png,
+   round-paper-rock.png, round-paper-paper.png, round-paper-scissors.png,
+   round-scissors-rock.png, round-scissors-paper.png, round-scissors-scissors.png
+   - Images showing the result of each round
+   - You can generate these from the round-result-template.html file in the public directory
+
+4. result-win.png - The image shown when the player wins the game
+   - You can generate this from the game-result-template.html file in the public directory
+
+5. result-lose.png - The image shown when the player loses the game
+   - You can generate this from the game-result-template.html file in the public directory
+
+6. cast-win.png - The image shown after the player casts their win
+   - You can generate this from the cast-win-template.html file in the public directory
+
+All images must be in PNG format with a 3:2 aspect ratio (as required by Farcaster Frames).
+Recommended size: 1200×800 pixels.
+
+After creating these images, deploy your app again to Vercel.

@@ -1,0 +1,21 @@
++--------------------------------------------------------------+
+|                                                              |
+|                     Rock Paper Scissors                      |
+|                                                              |
+|                                                              |
+|             Play against the computer in a                   |
+|                   best of 5 match!                           |
+|                                                              |
+|                                                              |
+|                  ✊        ✋        ✌️                      |
+|                 Rock     Paper    Scissors                   |
+|                                                              |
+|                                                              |
+|                       [Play Game]                            |
+|                                                              |
+|                                                              |
++--------------------------------------------------------------+
+
+This is a text representation of what the welcome.png image should look like.
+Create an actual PNG image with a 3:2 aspect ratio (1200x800 pixels recommended)
+using the welcome-image.html template in the public directory.
