@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors - Farcaster Mini App</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Include the Farcaster Mini App SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@farcaster/miniapp-sdk@0.0.15/dist/index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rock Paper Scissors</h1>
+
+      <div class="score-board">
+        <p>
+          Score: <span id="user-score">0</span> (You) -
+          <span id="computer-score">0</span> (Computer)
+        </p>
+        <p>Round: <span id="round-number">1</span> / 5</p>
+      </div>
+
+      <p id="round-result"></p>
+      <p id="game-result"></p>
+
+      <div id="choices" class="choices">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+      </div>
+
+      <div class="game-over-actions" style="display: none">
+        <button id="cast-result">Cast Result</button>
+        <button id="play-again">Play Again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
