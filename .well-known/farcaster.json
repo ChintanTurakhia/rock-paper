@@ -1,0 +1,36 @@
+{
+  "accountAssociation": {
+    "domain": "rock-paper-scissors-game.vercel.app"
+  },
+  "frame": {
+    "version": "1",
+    "name": "Rock Paper Scissors",
+    "iconUrl": "https://rock-paper-scissors-game.vercel.app/public/images/icon.png",
+    "homeUrl": "https://rock-paper-scissors-game.vercel.app",
+    "imageUrl": "https://rock-paper-scissors-game.vercel.app/public/images/welcome.png",
+    "buttonTitle": "Play Game",
+    "splashImageUrl": "https://rock-paper-scissors-game.vercel.app/public/images/icon.png",
+    "splashBackgroundColor": "#5a46c6",
+    "webhookUrl": "https://rock-paper-scissors-game.vercel.app/api/frame",
+    "subtitle": "Play against the computer in a best of 5 match",
+    "description": "A simple Rock Paper Scissors game where you can play against the computer and cast your wins to your Farcaster profile.",
+    "screenshotUrls": [
+      "https://rock-paper-scissors-game.vercel.app/public/images/screenshot1.png",
+      "https://rock-paper-scissors-game.vercel.app/public/images/screenshot2.png",
+      "https://rock-paper-scissors-game.vercel.app/public/images/screenshot3.png"
+    ],
+    "primaryCategory": "games",
+    "tags": [
+      "rockpaperscissors",
+      "game",
+      "farcaster",
+      "miniapp"
+    ],
+    "heroImageUrl": "https://rock-paper-scissors-game.vercel.app/public/images/hero.png",
+    "tagline": "Best of 5 Rock Paper Scissors",
+    "ogTitle": "Rock Paper Scissors Game",
+    "ogDescription": "Play Rock Paper Scissors against the computer and cast your wins!",
+    "ogImageUrl": "https://rock-paper-scissors-game.vercel.app/public/images/og.png",
+    "noindex": false
+  }
+}

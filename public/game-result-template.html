@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Game Result</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        
+        .image-container {
+            width: 1200px;
+            height: 800px; /* 3:2 aspect ratio */
+            background-color: #5a46c6;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .game-over {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        
+        .result-message {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+        
+        .win-message {
+            color: #28a745;
+            text-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+        }
+        
+        .lose-message {
+            color: #dc3545;
+            text-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+        }
+        
+        .tie-message {
+            color: #6c757d;
+            text-shadow: 0 0 10px rgba(108, 117, 125, 0.5);
+        }
+        
+        .final-score {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        
+        .score-value {
+            font-weight: bold;
+            font-size: 48px;
+        }
+        
+        .round-history {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .round {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .round-number {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .round-result {
+            font-size: 36px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        
+        .round-win {
+            background-color: rgba(40, 167, 69, 0.3);
+        }
+        
+        .round-lose {
+            background-color: rgba(220, 53, 69, 0.3);
+        }
+        
+        .round-tie {
+            background-color: rgba(108, 117, 125, 0.3);
+        }
+        
+        .action-message {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <h1>Rock Paper Scissors</h1>
+        <div class="game-over">Game Over!</div>
+        
+        <div class="result-message win-message" id="result-message">You Won! 🎉</div>
+        
+        <div class="final-score">
+            Final Score: <span class="score-value">You <span id="player-score">3</span> - <span id="computer-score">1</span> Computer</span>
+        </div>
+        
+        <div class="round-history">
+            <div class="round">
+                <div class="round-number">R1</div>
+                <div class="round-result round-win">W</div>
+            </div>
+            <div class="round">
+                <div class="round-number">R2</div>
+                <div class="round-result round-lose">L</div>
+            </div>
+            <div class="round">
+                <div class="round-number">R3</div>
+                <div class="round-result round-win">W</div>
+            </div>
+            <div class="round">
+                <div class="round-number">R4</div>
+                <div class="round-result round-win">W</div>
+            </div>
+            <div class="round">
+                <div class="round-number">R5</div>
+                <div class="round-result round-tie">T</div>
+            </div>
+        </div>
+        
+        <div class="action-message" id="action-message">Cast your win on Farcaster!</div>
+    </div>
+    
+    <script>
+        // This script allows you to customize the template for different game results
+        // You can modify these values to generate different images
+        
+        // Set the result type: 'win', 'lose', or 'tie'
+        const resultType = 'win';
+        
+        // Update the result message and styling
+        const resultMessage = document.getElementById('result-message');
+        const actionMessage = document.getElementById('action-message');
+        
+        if (resultType === 'win') {
+            resultMessage.textContent = 'You Won! 🎉';
+            resultMessage.className = 'result-message win-message';
+            actionMessage.textContent = 'Cast your win on Farcaster!';
+        } else if (resultType === 'lose') {
+            resultMessage.textContent = 'You Lost! 😢';
+            resultMessage.className = 'result-message lose-message';
+            actionMessage.textContent = 'Try again to beat the computer!';
+        } else {
+            resultMessage.textContent = 'It\'s a Tie!';
+            resultMessage.className = 'result-message tie-message';
+            actionMessage.textContent = 'Play again for a decisive result!';
+        }
+        
+        // Set the final score
+        document.getElementById('player-score').textContent = '3';
+        document.getElementById('computer-score').textContent = '1';
+        
+        // You can also customize the round history by modifying the HTML directly
+        // Each round can have a class of 'round-win', 'round-lose', or 'round-tie'
+    </script>
+</body>
+</html>

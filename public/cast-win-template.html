@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Cast Win</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        
+        .image-container {
+            width: 1200px;
+            height: 800px; /* 3:2 aspect ratio */
+            background-color: #5a46c6;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .trophy {
+            font-size: 120px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+        }
+        
+        .cast-message {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            max-width: 80%;
+            line-height: 1.4;
+        }
+        
+        .final-score {
+            font-size: 32px;
+            margin-bottom: 30px;
+            background-color: rgba(40, 167, 69, 0.3);
+            padding: 15px 30px;
+            border-radius: 10px;
+        }
+        
+        .score-value {
+            font-weight: bold;
+            font-size: 40px;
+        }
+        
+        .cast-preview {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            margin-bottom: 40px;
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+        }
+        
+        .cast-preview-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .cast-preview-content {
+            font-size: 28px;
+            line-height: 1.4;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+        }
+        
+        .farcaster-logo {
+            margin-top: 30px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .farcaster-icon {
+            font-size: 32px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <h1>Rock Paper Scissors</h1>
+        
+        <div class="trophy">🏆</div>
+        
+        <div class="cast-message">Share your victory with the Farcaster community!</div>
+        
+        <div class="final-score">
+            Final Score: <span class="score-value">You 3 - 1 Computer</span>
+        </div>
+        
+        <div class="cast-preview">
+            <div class="cast-preview-title">Your cast will look like this:</div>
+            <div class="cast-preview-content">
+                I just won a game of Rock Paper Scissors with a score of 3-1! 🎮 #RockPaperScissors
+            </div>
+        </div>
+        
+        <div class="farcaster-logo">
+            <span class="farcaster-icon">📱</span> Powered by Farcaster
+        </div>
+    </div>
+</body>
+</html>

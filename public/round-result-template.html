@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Round Result</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        
+        .image-container {
+            width: 1200px;
+            height: 800px; /* 3:2 aspect ratio */
+            background-color: #5a46c6;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .round-info {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        
+        .choices-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        
+        .choice-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .choice-label {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .choice-icon {
+            font-size: 120px;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        
+        .versus {
+            font-size: 36px;
+            margin: 0 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .result {
+            font-size: 36px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .player-win {
+            background-color: rgba(40, 167, 69, 0.3);
+        }
+        
+        .computer-win {
+            background-color: rgba(220, 53, 69, 0.3);
+        }
+        
+        .tie {
+            background-color: rgba(108, 117, 125, 0.3);
+        }
+        
+        .score {
+            font-size: 28px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <h1>Rock Paper Scissors</h1>
+        <div class="round-info">Round <span id="round-number">1</span> of 5</div>
+        
+        <div class="choices-container">
+            <div class="choice-box">
+                <div class="choice-label">You chose:</div>
+                <div class="choice-icon" id="player-choice">✊</div>
+            </div>
+            
+            <div class="versus">VS</div>
+            
+            <div class="choice-box">
+                <div class="choice-label">Computer chose:</div>
+                <div class="choice-icon" id="computer-choice">✌️</div>
+            </div>
+        </div>
+        
+        <div class="result player-win" id="result">You win this round!</div>
+        
+        <div class="score">
+            Score: You <span id="player-score">1</span> - <span id="computer-score">0</span> Computer
+        </div>
+    </div>
+    
+    <script>
+        // This script allows you to customize the template for different round results
+        // You can modify these values to generate different images
+        
+        // Set the round number (1-5)
+        document.getElementById('round-number').textContent = '1';
+        
+        // Set the player's choice (✊, ✋, or ✌️)
+        document.getElementById('player-choice').textContent = '✊';
+        
+        // Set the computer's choice (✊, ✋, or ✌️)
+        document.getElementById('computer-choice').textContent = '✌️';
+        
+        // Set the result message and style
+        const resultElement = document.getElementById('result');
+        
+        // Options: 'player-win', 'computer-win', or 'tie'
+        const resultType = 'player-win';
+        
+        if (resultType === 'player-win') {
+            resultElement.textContent = 'You win this round!';
+            resultElement.className = 'result player-win';
+        } else if (resultType === 'computer-win') {
+            resultElement.textContent = 'Computer wins this round!';
+            resultElement.className = 'result computer-win';
+        } else {
+            resultElement.textContent = 'It\'s a tie!';
+            resultElement.className = 'result tie';
+        }
+        
+        // Set the score
+        document.getElementById('player-score').textContent = '1';
+        document.getElementById('computer-score').textContent = '0';
+    </script>
+</body>
+</html>

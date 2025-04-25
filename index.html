@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Farcaster Mini-App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Farcaster Frame Meta Tag -->
+    <meta name="fc:frame" content='{
+        "version": "vNext",
+        "image": {
+            "src": "https://rock-paper-scissors-game.vercel.app/images/welcome.png",
+            "aspectRatio": "1.91:1"
+        },
+        "buttons": [
+            {
+                "label": "Play Game",
+                "action": "post"
+            }
+        ],
+        "postUrl": "https://rock-paper-scissors-game.vercel.app/api/frame"
+    }' />
+</head>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <div id="game-container">
+            <div id="welcome-screen" class="screen active">
+                <p>Welcome to Rock Paper Scissors!</p>
+                <p>Play against the computer in a best of 5 match.</p>
+                <button id="start-game">Start Game</button>
+            </div>
+            
+            <div id="game-screen" class="screen">
+                <div id="score-container">
+                    <div class="score">
+                        <span>You:</span>
+                        <span id="player-score">0</span>
+                    </div>
+                    <div class="score">
+                        <span>Computer:</span>
+                        <span id="computer-score">0</span>
+                    </div>
+                    <div class="round">
+                        <span>Round:</span>
+                        <span id="round-number">1</span>/5
+                    </div>
+                </div>
+                
+                <div id="choices-container">
+                    <p>Make your choice:</p>
+                    <div class="choices">
+                        <button class="choice" data-choice="rock">✊ Rock</button>
+                        <button class="choice" data-choice="paper">✋ Paper</button>
+                        <button class="choice" data-choice="scissors">✌️ Scissors</button>
+                    </div>
+                </div>
+                
+                <div id="result-container">
+                    <div id="player-choice" class="choice-display">
+                        <p>Your choice:</p>
+                        <div class="choice-icon"></div>
+                    </div>
+                    <div id="computer-choice" class="choice-display">
+                        <p>Computer's choice:</p>
+                        <div class="choice-icon"></div>
+                    </div>
+                    <div id="round-result"></div>
+                </div>
+            </div>
+            
+            <div id="game-over-screen" class="screen">
+                <h2>Game Over!</h2>
+                <div id="final-score"></div>
+                <div id="winner-message"></div>
+                <button id="play-again">Play Again</button>
+                <button id="cast-win" class="hidden">Cast Your Win!</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/game.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@farcaster/mini-app@1/dist/index.min.js"></script>
+</body>
+</html>
